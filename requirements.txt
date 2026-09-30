@@ -3,3 +3,5 @@ pytest
 webdriver-manager
 python-dotenv
 guara
+behave
+pytest-bdd
