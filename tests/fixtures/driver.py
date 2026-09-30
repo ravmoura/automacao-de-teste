@@ -27,8 +27,12 @@ def driver_func():
         "profile.password_manager_leak_detection": False
     }
     
-    chrome_options.add_experimental_option("prefs", prefs)
-    
+    chrome_options.add_experimental_option("prefs", prefs)    
+    chrome_options.add_argument("--headless")
+    chrome_options.add_argument("--no-sandbox")
+    chrome_options.add_argument("--disable-dev-shm-usage")
+    chrome_options.add_argument("--window-size=1920,1080")
+
     # Desativa Safe Browsing (remove alertas de segurança)
     chrome_options.add_argument("--disable-features=PasswordLeakDetection")
     chrome_options.add_argument("--safebrowsing-disable-leak-detection")
